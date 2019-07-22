@@ -1,0 +1,153 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "0b60abd1-0645-4402-a395-1d0ae2967edf": {
+        "id": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+        "parent": null,
+        "name": "test",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
+          "d6578bcb-094b-411f-ac73-99232f755e09",
+          "a48c4db2-dad7-4ff5-865d-413efd349672"
+        ],
+        "isRemovable": false,
+        "filePath": "test"
+      },
+      "9a9a0ffe-3cab-4777-b017-2275da9a7c3c": {
+        "id": "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
+        "parent": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n\n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "d6578bcb-094b-411f-ac73-99232f755e09": {
+        "id": "d6578bcb-094b-411f-ac73-99232f755e09",
+        "parent": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+        "name": "myfirstpython.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/myfirstpython.py",
+        "code": "import datetime\n\ndef handler(event, context):\n    current_time = datetime.datetime.now().time()\n    message = 'Hello {} {}! The server time is '.format(event['first_name'], \n                                    event['last_name'])  \n    return { \n        'message' : message + str(current_time)\n    }  ",
+        "config": {
+          "runtime": "python3.6",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [],
+        "testCases": {
+          "f1d14960-1c63-4e24-a8c4-cdd7156223e2": {
+            "id": "f1d14960-1c63-4e24-a8c4-cdd7156223e2",
+            "name": "Unnamed event",
+            "functionId": "d6578bcb-094b-411f-ac73-99232f755e09",
+            "event": "{\n    \"first_name\": \"value1\",\n    \"last_name\": \"value2\"\n}"
+          }
+        }
+      },
+      "a48c4db2-dad7-4ff5-865d-413efd349672": {
+        "id": "a48c4db2-dad7-4ff5-865d-413efd349672",
+        "parent": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+    "openFiles": [
+      "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
+      "d6578bcb-094b-411f-ac73-99232f755e09"
+    ],
+    "currentFileId": "d6578bcb-094b-411f-ac73-99232f755e09",
+    "resources": {
+      "ses-hirudinee+aws@adroitlogic.com": {
+        "name": "ses-hirudinee+aws@adroitlogic.com",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "hirudinee+aws@adroitlogic.com",
+          "projectRegion": "us-east-1",
+          "params": {
+            "to": "hirudineel@gmail.com",
+            "cc": "",
+            "bcc": "",
+            "subject": "test",
+            "body": {
+              "text": "",
+              "html": " <!DOCTYPE html>\n<html>\n<body>\n\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n\n\n</body>\n</html> "
+            }
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "d6578bcb-094b-411f-ac73-99232f755e09",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/test",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "test",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1563783859423
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "test",
+      "url": "https://github.com/HirudineeADRT/pythontestK"
+    }
+  }
+}
