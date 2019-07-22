@@ -9,7 +9,8 @@
         "isDirectory": true,
         "children": [
           "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
-          "d6578bcb-094b-411f-ac73-99232f755e09"
+          "d6578bcb-094b-411f-ac73-99232f755e09",
+          "c6bf9948-8ffd-4037-801d-d16b381c8e1d"
         ],
         "isRemovable": false,
         "filePath": "test"
@@ -31,7 +32,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigusEast1Pythonhiruhirusampleget",
+            "config": {}
+          }
+        ]
       },
       "d6578bcb-094b-411f-ac73-99232f755e09": {
         "id": "d6578bcb-094b-411f-ac73-99232f755e09",
@@ -52,7 +58,7 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1TestAPIhiruget",
+            "resourceName": "apigusEast1Pythonhiruhirupost",
             "config": {}
           }
         ],
@@ -64,6 +70,25 @@
             "event": "{\n    \"first_name\": \"value1\",\n    \"last_name\": \"value2\"\n}"
           }
         }
+      },
+      "c6bf9948-8ffd-4037-801d-d16b381c8e1d": {
+        "id": "c6bf9948-8ffd-4037-801d-d16b381c8e1d",
+        "parent": "0b60abd1-0645-4402-a395-1d0ae2967edf",
+        "name": "test27.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "test/test27.py",
+        "code": "def handler(event, context):\n    \n    return {\"message\": \"Successfully executed\"}\n",
+        "config": {
+          "runtime": "python2.7",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
       }
     },
     "deletedFiles": [
@@ -72,7 +97,8 @@
     "rootNode": "0b60abd1-0645-4402-a395-1d0ae2967edf",
     "openFiles": [
       "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
-      "d6578bcb-094b-411f-ac73-99232f755e09"
+      "d6578bcb-094b-411f-ac73-99232f755e09",
+      "c6bf9948-8ffd-4037-801d-d16b381c8e1d"
     ],
     "currentFileId": "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
     "resources": {
@@ -129,6 +155,44 @@
           "stageDeploymentId": "jcdn9w",
           "mode": 1
         }
+      },
+      "apigusEast1Pythonhiruhirupost": {
+        "name": "apigusEast1Pythonhiruhirupost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "Pythonhiru",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "hiru",
+          "resourcePath": "/hiru",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
+        }
+      },
+      "apigusEast1Pythonhiruhirusampleget": {
+        "name": "apigusEast1Pythonhiruhirusampleget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "Pythonhiru",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "hiru/sample",
+          "resourcePath": "/hiru/sample",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
+        }
       }
     },
     "customTemplate": {
@@ -146,6 +210,14 @@
       },
       {
         "lambdaId": "d6578bcb-094b-411f-ac73-99232f755e09",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/test",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "c6bf9948-8ffd-4037-801d-d16b381c8e1d",
         "varKey": "PYTHONPATH",
         "varValue": "/var/runtime:/var/task/test",
         "shouldPersist": true,
@@ -172,7 +244,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1563794183090
+    "lastSave": 1563794864755
   },
   "VCS_STATE": {
     "provider": "GitHub",
