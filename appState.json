@@ -9,8 +9,7 @@
         "isDirectory": true,
         "children": [
           "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
-          "d6578bcb-094b-411f-ac73-99232f755e09",
-          "a48c4db2-dad7-4ff5-865d-413efd349672"
+          "d6578bcb-094b-411f-ac73-99232f755e09"
         ],
         "isRemovable": false,
         "filePath": "test"
@@ -51,7 +50,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "apigusEast1TestAPIhiruget",
+            "config": {}
+          }
+        ],
         "testCases": {
           "f1d14960-1c63-4e24-a8c4-cdd7156223e2": {
             "id": "f1d14960-1c63-4e24-a8c4-cdd7156223e2",
@@ -60,26 +64,17 @@
             "event": "{\n    \"first_name\": \"value1\",\n    \"last_name\": \"value2\"\n}"
           }
         }
-      },
-      "a48c4db2-dad7-4ff5-865d-413efd349672": {
-        "id": "a48c4db2-dad7-4ff5-865d-413efd349672",
-        "parent": "0b60abd1-0645-4402-a395-1d0ae2967edf",
-        "name": "__init__.py",
-        "type": "PYTHON_FILE",
-        "isDirectory": false,
-        "children": [],
-        "isRemovable": true,
-        "filePath": "test/__init__.py",
-        "code": ""
       }
     },
-    "deletedFiles": [],
+    "deletedFiles": [
+      "test/__init__.py"
+    ],
     "rootNode": "0b60abd1-0645-4402-a395-1d0ae2967edf",
     "openFiles": [
       "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
       "d6578bcb-094b-411f-ac73-99232f755e09"
     ],
-    "currentFileId": "d6578bcb-094b-411f-ac73-99232f755e09",
+    "currentFileId": "9a9a0ffe-3cab-4777-b017-2275da9a7c3c",
     "resources": {
       "ses-hirudinee+aws@adroitlogic.com": {
         "name": "ses-hirudinee+aws@adroitlogic.com",
@@ -97,6 +92,42 @@
               "html": " <!DOCTYPE html>\n<html>\n<body>\n\n<h1>My First Heading</h1>\n<p>My first paragraph.</p>\n\n\n</body>\n</html> "
             }
           }
+        }
+      },
+      "apigusEast1TestAPIhiruget": {
+        "name": "apigusEast1TestAPIhiruget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "TestAPI",
+          "apiId": "0itznun7w3",
+          "endpointType": "EDGE",
+          "rootResourceId": "h2lelj6j7k",
+          "existingResources": {
+            "/hiru/test": "2b8zt0",
+            "/testPathWithSlash": "2rkw74",
+            "/hiru": "3nc52b",
+            "/hiru/sample": "4226gg",
+            "/hiru/sqstest": "88gr2y",
+            "/MyLambda": "98nqbj",
+            "/": "h2lelj6j7k",
+            "/testWithSlash": "q4m4g1",
+            "/testtwospeciallambda": "q4szm3",
+            "/testtwospecialkumutest": "wey3lk",
+            "/hiru/snscheck": "wok1ku"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/hiru",
+          "resourceName": "hiru",
+          "resourceId": "3nc52b",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "jcdn9w",
+          "mode": 1
         }
       }
     },
@@ -141,7 +172,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1563783859423
+    "lastSave": 1563794183090
   },
   "VCS_STATE": {
     "provider": "GitHub",
